@@ -8,7 +8,7 @@ document.getElementById("unlock-btn").addEventListener("click", checkPassword);
 function checkPassword() {
     const enteredPassword = passwordInput.value;
     // You can change the password as needed
-    const correctPassword = "PramtiWSC";
+    const correctPassword = "RaysDev2123";
 
     if (enteredPassword === correctPassword) {
         lockScreen.style.display = "none";
@@ -22,7 +22,7 @@ function checkPassword() {
 document.getElementById("mulai").addEventListener("click", function () {
     const enteredPassword = passwordInput.value;
     // You can change the password as needed
-    const correctPassword = "PramtiWSC";
+    const correctPassword = "RaysDev2123";
 
     if (enteredPassword === correctPassword) {
         lockScreen.style.display = "none";
