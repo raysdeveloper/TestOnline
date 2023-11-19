@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengetahuan Kepramukaan</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+</head>
+
+<body>
+    <div class="lock-screen" id="lock-screen">
+        <div class="card">
+            <h3>This website is locked, please enter the password below!</h3>
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button id="unlock-btn" onclick="checkPassword()">Unlock</button>
+        </div>
+    </div>
+
+    <div id="info">
+        <h1>Test Pengetahuan Kepramukaan</h1>
+        <p>Test ini berisikan 25 soal acak dan harus di kerjakan dalam 10 menit, setelah kamu selesai mengerjakan / waktu telah habis maka kamu akan di berikan hasil dari test kamu. setelah tombol Mulai di klik maka timer akan mulai berjalan!<br><br>Made by: Ray</p>
+        <button id="mulai">Mulai</button>
+    </div>
+
+    <div class="app" id="app">
+        <h1>Pengetahuan Kepramukaan
+            <div id="timer"></div>
+        </h1>
+
+        <div class="quiz" id="quiz-container">
+            <h2 id="question">Question goes here</h2>
+            <h2 id="result"></h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+
+            <div class="footer">
+                <button id="skip-btn">Skip</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+        <script type="module" src="./script/questions.js"></script>
+        <script type="module" src="./script/script.js"></script>
+    </div>
+</body>
+
+</html>
