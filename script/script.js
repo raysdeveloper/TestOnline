@@ -1,3 +1,15 @@
+const close = document.getElementById("close-btn");
+const popup = document.getElementById('popup1')
+
+close.addEventListener('click', function() {
+    btnClose()
+})
+
+function btnClose() {
+    popup.style.display = 'none';
+}
+
+
 // Lock screen script
 const lockScreen = document.getElementById("lock-screen");
 const start = document.getElementById("info");
@@ -8,11 +20,12 @@ document.getElementById("unlock-btn").addEventListener("click", checkPassword);
 function checkPassword() {
     const enteredPassword = passwordInput.value;
     // You can change the password as needed
-    const correctPassword = "RaysDev2123";
+    const correctPassword = "PramtiWSC";
 
     if (enteredPassword === correctPassword) {
         lockScreen.style.display = "none";
         start.style.display = "block";
+        popup.style.visibility = "visible";
     } else {
         alert("Incorrect password. Try again.");
     }
@@ -22,7 +35,7 @@ function checkPassword() {
 document.getElementById("mulai").addEventListener("click", function () {
     const enteredPassword = passwordInput.value;
     // You can change the password as needed
-    const correctPassword = "RaysDev2123";
+    const correctPassword = "PramtiWSC";
 
     if (enteredPassword === correctPassword) {
         lockScreen.style.display = "none";
@@ -84,7 +97,10 @@ function showQuestion(questionsArray) {
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-    currentQuestion.answers.forEach(answer => {
+    // Mengacak array jawaban
+    const shuffledAnswers = currentQuestion.answers.sort(() => Math.random() - 0.5);
+
+    shuffledAnswers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
