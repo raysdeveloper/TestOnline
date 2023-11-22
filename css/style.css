@@ -301,4 +301,15 @@ body {
     .popup {
         width: 70%;
     }
-}
+
+    #password-input {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .next-btn {
+        width: 120px
+
+    .skip-btn {
+        width: 120px;
+    }
