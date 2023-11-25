@@ -82,14 +82,23 @@ let startTime;
 let timer;
 
 function startQuiz(numberOfQuestions) {
-    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    selectedQuestions = shuffledQuestions.slice(0, numberOfQuestions);
+    const shuffledQuestions = shuffleArray(questions).slice(0, numberOfQuestions);
+    selectedQuestions = shuffledQuestions;
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion(selectedQuestions);
     startTime = Date.now(); // Record the start time
 }
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 
 function showQuestion(questionsArray) {
     resetState();
